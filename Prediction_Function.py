@@ -14,6 +14,10 @@ from tensorflow.keras.losses import MeanSquaredError
 def prediction_ML_walls_individual(IM, T, H_Tcr, Ar_Mean, ALR_G, IA, Sa, Sv,
                                    var_predict=["PFA_max","rDR_max"], model_predict=["RF", "ANN"]):
     """
+    This function make ONE prediction of the maximum roof acceleration (PFA_max) and the maximum 
+    roof drift ratio (rDR_max) in reinforced concrete wall buildings. The required data to make the 
+    predictions is presented below:
+
     IM: Wall Index
     T: Fundamental period 
     H_Tcr: Stiffness Index
@@ -69,6 +73,10 @@ def prediction_ML_walls_individual(IM, T, H_Tcr, Ar_Mean, ALR_G, IA, Sa, Sv,
 def prediction_ML_walls_multiple(X,
                                  var_predict=["PFA_max","rDR_max"], model_predict=["RF", "ANN"]):
     """
+    This function make MULTIPLE predictions of the maximum roof acceleration (PFA_max) and the maximum 
+    roof drift ratio (rDR_max) in reinforced concrete wall buildings. The required data to make the 
+    predictions is presented below:
+    
     X is a dataframe with the next columns (each row is a prediction):
         IM-Arq: Wall Index
         T-Arq: Fundamental period 
